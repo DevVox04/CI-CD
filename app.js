@@ -14,7 +14,8 @@ const PORT = process.env.PORT || 3000;
 // that integrates this example will map that local path to a served URL so the
 // browser can load it. If you run locally, replace the imageUrl with a public URL
 // or copy the image into a "public" folder and serve it with express.static.
-const imageUrl = '/mnt/data/b9c44e69-1c5b-4957-b8e6-c676f71dc951.png';
+const imageUrl = 'https://via.placeholder.com/600x300.png?text=Banner';
+
 
 app.get('/', (req, res) => {
   res.send(`<!doctype html>
@@ -124,4 +125,6 @@ function generateProductCard(title, price){
   `;
 }
 
-app.listen(PORT, ()=>console.log(`Frontend demo running on http://localhost:${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Frontend demo running on port ${PORT}`);
+});
