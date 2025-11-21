@@ -1,0 +1,17 @@
+pipeline {
+	  agent any
+	
+	  stages {
+		    stage('build') {
+			      steps {
+				        git 'https://github.com/DevVox04/CI-CD.git'
+				        sh 'npm install'
+			      }
+		    }
+            stage('run') {
+                  steps {
+                        sh 'npm start'
+                  }
+            }
+	  }
+}
