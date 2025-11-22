@@ -70,16 +70,16 @@ sudo tee /etc/apt/sources.list.d/ngrok.list &&
 sudo apt update && 
 sudo apt install ngrok
 ```
-    Sau khi cài đặt ngrok chạy lệnh
+  Sau khi cài đặt ngrok chạy lệnh
 ```bash
 ngrok http 8080
 ```
-    Sẽ xuất hiện 1 url, copy url đấy.
-    Trong dự án của mình ở GitHub vào phần `Settings` sau đó vào `Webhooks` và bấm nút Add webhook. Trong phần Payload URL dán url vừa copy bên máy ảo vào
+Sẽ xuất hiện 1 url, copy url đấy.
+Trong dự án của mình ở GitHub vào phần `Settings` sau đó vào `Webhooks` và bấm nút Add webhook. Trong phần Payload URL dán  url vừa copy bên máy ảo vào
 ```bash
 "url_ngrok/github-webhook/"
 ```
-    Lướt xuống dưới đến phần `Which events would you like to trigger this webhook?` chọn `Just the push event`
+Lướt xuống dưới đến phần `Which events would you like to trigger this webhook?` chọn `Just the push event`
 ## Bước 4: Viết Jenkinsfile
 - Tạo một Jenkinsfile sau đó cấu hình như sau
 ```bash
